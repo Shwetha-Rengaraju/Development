@@ -1,0 +1,49 @@
+body 
+    { background:linear-gradient( to right,skyblue ,lightseagreen);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+ h1
+    {background-color: gray;
+     color: #000;
+     text-align: center;
+     border-style: dotted;
+ }
+ p
+    {background-color: beige;
+     color: navy;
+     border-style: double;
+     border-color: deeppink;
+     border: radius 5px;
+     padding: 10px;
+     /* top,right,bottom,left*/
+    }
+#P2
+{ color: brown;
+  font-size: 30px;
+
+}
+
+img{
+    float: right; 
+}
+#Box1
+{border: 5px solid;
+ border-color: black;
+ width: 200px;
+ height: 250px;
+ font-size: medium;
+ background-color: chocolate;
+ padding:20px;
+}
+
+#Box2
+{border: 5px solid;
+ border-color: black;
+ width: 200px;
+ height: 250px;
+ font-size: medium;
+ background-color: rgb(150, 210, 30);
+ padding: 20px;
+ margin-left: 20%;
+}
