@@ -1,0 +1,25 @@
+body
+{
+background-image: url(image.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+h1
+{background-color: gray;
+ color: #000;
+ text-align: center;
+ border-style: dotted;
+}
+p
+{background-color: beige;
+ color: navy;
+ border-style: double;
+ border-color: deeppink;
+ border: radius 5px;
+ padding: 10px;
+}
+#P2
+{ color: brown;
+font-size: 30px;
+}
