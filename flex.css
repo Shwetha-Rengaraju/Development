@@ -1,0 +1,49 @@
+.Container{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    
+}
+
+.Container >div {
+    width: 200px;
+    height: 300px;
+    align-items: center;
+    /* text-align: center; */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+#Box1{
+    background-color: red;
+}
+
+#Box2{
+    background-color:goldenrod;
+}
+
+#Box3{
+    background-color: beige;
+}
+
+#Box4{
+    background-color: chocolate;
+}
+#Box5{
+    background-color: gray;
+}
+#Box6{
+    background-color: rgb(117, 210, 30);
+}
+#Box7{
+    background-color: plum;
+}
+#Box8{
+    background-color: palevioletred;
+}
+#Box9{
+    background-color: rgb(111, 30, 210);
+}
