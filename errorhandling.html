@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML page</title>
+</head>
+<body>
+    <h2>Error Handling[Try and catch]</h2>
+    <br>
+    <p>Type a number between 10 -20</p>
+    <input id="Case" type="text">
+    <button type="button" onclick="CheckThevalue()">Click the button</button>
+    <p id="Check value"></p>
+    <script>
+       function CheckThevalue(){
+        let message=document.getElementById("Check value");
+        message.innerHTML="";
+        let a =document.getElementById("Case").value;
+
+     try{
+        if (a.trim() == "") throw "empty";
+        if (isNaN(a)) throw"Not a number";
+        a =Number(a);
+        if (a > 20) throw " too high";
+        if(a < 10) throw" too low";
+     }
+       catch (error){
+        message.innerHTML="Input is " + error;
+       }
+       finally{
+        document.getElementById("Case").value=" ";
+       }
+       }
+
+    </script>
+</body>
+</html>
