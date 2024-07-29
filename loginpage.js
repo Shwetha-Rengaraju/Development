@@ -1,33 +1,69 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {validusers}from '../utils/validusers';
+import {toast} from "react-toastify";
+import { validusers } from "./utils/validusers";
 
-const loginpage =()=>{
-  const navigate =useNavigate();
-  const[formdetails,setformdetails]=useState({
-    Username :"",
-    Password :""
+const LoginPage = () => {
+  const navigate = useNavigate();
+  const [formDetails, setFormDetails] = useState({
+    username: "",
+    password: "",
   });
-const handleLogin = ()=>{
-    const{Username,Password} =formdetails;
-    const client =validusers.find((client)=>client.Username === Username && client.Password ===Password);
-}
-if(client){
-    navigate("/formpage");
-    toast.success("Successfully logged in");
-    setformdetails({
-        Username :"",
-        Password :" "
-    });
-}else{
-    toast.console.error("Invalid Username and password");
-    setformdetails({
-        Username :"",
-        Password :" "
-    });
-}
-const handleChangeinput =(e)=>{
-    
-}
 
-}
+  const handleLogin = () => {
+    const { username, password } = formDetails;
+    const trimmedUserName = username.trim();
+    const trimmedPassWord = password.trim();
+    const client = validusers.find(
+      (user) => user.Username === trimmedUserName && user.Password === trimmedPassWord
+    );
+
+    if (client) {
+      navigate("/formpage");
+      toast.success("Successfully logged in");
+      setFormDetails({
+        username: "",
+        password: "",
+      });
+    } else {
+      toast.error("Invalid Username and password");
+      setFormDetails({
+        username: "",
+        password: "",
+      });
+    }
+  };
+   
+  const handleChangeInput = (e) => {
+    const {value, name} = e.target;
+    setFormDetails((prevState) => ({
+        ...prevState,
+        [name]: value,
+    }))
+  };
+   
+
+  return(
+    <form onSubmit={handleLogin}>
+    <div>    
+      <label>Username:</label>
+      <input type="text"
+       name="username"  
+       value ={formDetails.username}
+       onChange ={handleChangeInput}
+      />
+      <label>Password:</label>
+      <input type="password"  
+       name="password"
+       value ={formDetails.password}
+       onChange ={handleChangeInput}
+      />
+      <button type ="submit" >Submit</button>
+
+    </div>
+    </form>
+  );
+};
+export default LoginPage;
+
+
