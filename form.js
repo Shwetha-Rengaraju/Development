@@ -10,27 +10,27 @@ const Form = () => {
   const [errors, setErrors] = useState("");
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setName(e.target.value.toUpperCase().trim());
   };
 
   const handleAgeChange = (e) => {
-    setAge(e.target.value);
+    setAge(e.target.value.toUpperCase().trim());
   };
 
   const handleGenderChange = (e) => {
-    setGender(e.target.value);
+    setGender(e.target.value.toUpperCase().trim());
   };
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    setEmail(e.target.value.trim());
   };
 
   const handleMobileChange = (e) => {
-    setMobileNumber(e.target.value);
+    setMobileNumber(e.target.value.trim());
   };
 
   const handlelocationChange = (e) => {
-    setlocation(e.target.value);
+    setlocation(e.target.value.toUpperCase().trim());
   };
 
   const validate = () => {
@@ -122,6 +122,7 @@ const Form = () => {
         />
         <label>Female</label>
         {errors.Gender && <p style={{ color: "Red" }}>{errors.Gender}</p>}
+        
         <label>Email: </label>
         <input type="email" value={email} onChange={handleEmailChange} />
         {errors.email && <p style={{ color: "Red" }}>{errors.email}</p>}
