@@ -1,0 +1,27 @@
+
+
+.table overall  {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  th, td {
+    padding: 12px ;
+    border: 1px solid #dddddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #8f6b6b;
+    cursor: pointer;
+  }
+  
