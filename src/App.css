@@ -1,38 +1,118 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:hover {
+  color: #ff6347; /* Change the hover color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+label {
+  display: block; /* Labels as block elements */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333333; /* Dark text color */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="radio"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc; /* Light gray border */
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Radio Button Styles */
+input[type="radio"] {
+  width: auto; /* Don't stretch radio buttons */
+  margin-right: 5px; /* Space between radio and label */
+}
+
+label[for="male"],
+label[for="female"] {
+  display: inline; /* Keep radio labels inline */
+  margin-right: 15px; /* Space between gender options */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff6347; /* Change the hover color */
+}
+
+.contact,
+.about,
+.home {
+  padding: 20px;
 }
